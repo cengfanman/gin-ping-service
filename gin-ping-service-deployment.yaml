@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: gin-ping-service
-        image: gin-ping-service:latest # Make sure this matches the tag you used when building your Docker image
+        image: registry.cn-shenzhen.aliyuncs.com/chatfinbot/gin-ping-service:latest # Make sure this matches the tag you used when building your Docker image
         ports:
         - containerPort: 8080
