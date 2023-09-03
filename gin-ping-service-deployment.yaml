@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gin-ping-service-deployment
+  labels:
+    app: gin-ping-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gin-ping-service
+  template:
+    metadata:
+      labels:
+        app: gin-ping-service
+    spec:
+      containers:
+      - name: gin-ping-service
+        image: gin-ping-service:latest # Make sure this matches the tag you used when building your Docker image
+        ports:
+        - containerPort: 8080
